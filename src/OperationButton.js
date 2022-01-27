@@ -1,14 +1,16 @@
 import React from "react";
 import { ACTIONS } from "./App";
 
-function operationButton({ dispatch, operation }) {
+function OperationButton({ dispatch, operation }) {
   return (
     <button
-      onClick={() => dispatch({ type: ACTIONS.CHOOSE_OPERATION, payload: { operation } })}
+      onClick={() =>
+        dispatch({ type: ACTIONS.CHOOSE_OPERATION, payload: { operation } })
+      }
     >
-      {digit}
+      {operation}
     </button>
   );
 }
 
-export default operationButton;
+export default OperationButton;
